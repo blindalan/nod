@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Vision</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+	<header id="home">
+		<nav class="navbar">
+			<div class="navbar-header">
+                <img alt="logo oficial"  class="navbar-header__banner" src="{{url_for('static', filename='imagens/imagem_suporte.jpg') }} ">
+				<button type="button" class="navbar-header__toggle">
+					<i class="fas fa-bars" aria-label="menu"></i>
+				</button>
+			</div>
+
+			<ul class="navbar-list dropup dropright">
+				<li>
+					<a href="/index" class="navbar-list__link">home</a>
+				</li>
+				<li>
+					<a href="/contato" class="navbar-list__link"> Contato </a>
+				</li>
+				<li>
+					<a href="/diferenciais" class="navbar-list__link">diferenciais</a>
+				</li>
+				<li>
+					<a href="#" class="navbar-list__link"> vídeos </a>
+				</li>
+				<li>
+					<a href="#galeria" class="navbar-list__link">galeria</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-iccons__iccon dropdown-item:focus">
+				<li>
+					<a href="http://www.twitter.com" target="_blank" class="navbar-iccons__iccom">
+						<i class="fab fa-twitter" aria-label="twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.youtube.com/c/blindvision" target="_blank" class="navbar-iccons__iccom">
+						<i class="fab fa-youtube" aria-label="Youtube"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com" target="_blank" class="navbar-iccons__iccom">
+						<i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+    
+		<div class="hero btn-toolbar">
+			<img src="{{url_for('static', filename='imagens/windowsXP.jpg') }} "  class="hero__video " alt="Imagem ilustrando a área de trabalho do windows xp">
+			<div class="hero-texto">
+				<h1 class="hero-texto__titulo">bem vindos ao<br>site <span
+						class="hero-texto__titulo--linha--2">Blind Vision	</span></h1
+			</div>
+		</div>
+</header>
+    
+{% block conteudo %}
+    {% endblock  %}
+
+<footer class="footer">
+    <ul class="footer-list">
+        <li class="footer-list__item">
+            <a href="/index" class="footer-list__link">home</a>
+        </li>
+        <li class="footer-list__item">
+            <a href="/contato" class="footer-list__link">Contato</a>
+        </li>
+        <li class="footer-list__item">
+            <a href="/diferenciais" class="footer-list__link">diferenciais</a>
+        </li>
+        <li class="footer-list__item">
+            <a href="#" class="footer-list__link">pacotes</a>
+        </li>
+        <li class="footer-list__item">
+            <a href="#" class="footer-list__link">Contato</a>
+        </li>
+    </ul>
+    <ul class="footer-icons">
+        <li>
+            <a href="https://www.twitter.com" target="_blank" class="footer-icons__icon"></a>
+            <i class="fab fa-twitter" aria-label="twitter"></i>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com" target="_blank" class="footer-icons__icon"></a>
+            <i class="fab fa-linkedin" aria-label="linkedin"></i>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/c/blindvision" target="_blank" class="footer-icons__icon"></a>
+            <i class="fab fa-youtube" aria-label="youtube"></i>
+        </li>
+    </ul>
+
+    <p class="copyright">copyright &copy: BlindVision <span class="date"></span> todos os direitos reservados</p>
+    
+</footer>
+    
+</body>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</html>

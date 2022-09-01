@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h2 class="section__titulo text-light">olá meu nome é {{nome}} sejam bem vindos</h2>
+
+<section id="sobre" class="sobre flex-column input-group custom-control-inline">
+    <h2 class="section__titulo text-light">sobre<span class="section__titulo--destaque"> nós</span></h2>
+    <div class="sobre-c">        
+            <div class="sobre-texto border-bottom bg-danger">
+                <img alt="imagem que ilustra um olho a sua esquerda, ao lado, escrito Blind Vision" class="navbar-header__logo" src="{{url_for('static', filename='imagens/oficial.jpg') }} ">        
+                <br>
+                <h3 class="sobre-texto__titulo text-light"> {{titulo}} </h3>
+            <br>
+            <p class="text-light display-4">{{texto}}</p>
+        </div>
+    </div>
+</section>        
+
+
+<section id="pacotes" class="row">
+  <h2 class="section__titulo">Aqui temos nossos<span class="section__titulo--destaque"> cursos </span></h2>
+  <div class="pacotes">
+    <article class="pacote">
+      <img alt="imagem que ilustra um olho a sua esquerda, ao lado, escrito Blind Vision" class="navbar-header__logo" src="{{url_for('static', filename='imagens/python.jpg') }} ">
+      <div class="pacote__info">
+        <div class="info-header">
+          <h3 class="info-header__titulo"> python </h3>
+          <p class="info-header__dias">ilimitado</p>
+        </div>
+        <p class="info-body"> {{python}} </p>
+        <div class="info-footer">
+          <span>
+            <i class="fas fa-users"></i>
+            valor único
+          </span>
+          <p>por R$150.00 reais</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="pacote">
+      <img alt="imagem que ilustra um olho a sua esquerda, ao lado, escrito Blind Vision" class="navbar-header__logo" src="{{url_for('static', filename='imagens/java.jpg') }} ">
+      <div class="pacote__info">
+        <div class="info-header">
+          <h3 class="info-header__titulo"> java </h3>
+          <p class="info-header__dias"> ilimitado </p>
+        </div>
+        <p class="info-body">{{java}}</p>
+        <div class="info-footer">
+          <span>
+            <i class="fas fa-users"></i>
+            valor único
+          </span>
+          <p>por R$150.00 reais</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<h2>Aqui abaixo nosso formulário de contato</h2>
+{% endblock conteudo %}
